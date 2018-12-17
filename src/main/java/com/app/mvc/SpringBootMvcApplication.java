@@ -15,11 +15,17 @@ public class SpringBootMvcApplication {
 		return "viewresolver";
 	}
 	
+	@RequestMapping("/thymeleaf")
+	public String tyleaf() {
+		return "template";
+	}
+	
 	@ResponseBody
 	@RequestMapping("/cat")
 	public Cat cat() {
 		return new Cat("Athena","Bengal",1);
 	}
+	
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootMvcApplication.class, args);
